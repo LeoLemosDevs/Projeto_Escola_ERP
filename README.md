@@ -174,7 +174,7 @@ Abra o navegador e acesse a página de instalação:
 http://localhost/Projeto_Escola_ERP/install.php
 ```
 Clique no botão azul **"🚀 INSTALAR / RESETAR BANCO DE DADOS DA MASTER SCHOOL"**.
-> ✔️ O instalador construirá o banco `master_school_erp`, criará todas as 10 tabelas relacionais (`usuarios`, `alunos`, `professores`, `turmas`, `disciplinas`, `notas`, `frequencia`, `mensalidades`, `noticias`, `system_logs`) e preencherá com dados de teste em menos de 2 segundos.
+> ✔️ O instalador construirá o banco `master_school_erp`, criará todas as 10 tabelas relacionais (`usuarios`, `alunos`, `professores`, `turmas`, `disciplinas`, `notas`, `frequencias`, `mensalidades`, `noticias_eventos`, `system_logs`) e irá popular em menos de 2 segundos um ecossistema com **500 Alunos (do G1 da Educação Infantil ao Ensino Médio Completo)**, **10 Professores com matérias diferentes**, **20 Turmas**, **80 Disciplinas** e **2.000 Mensalidades** (Pix, Boleto, Cartão e Inadimplência) prontas para demonstração!
 
 ---
 

@@ -8,6 +8,7 @@ Bem-vindo(a) ao acervo oficial de documentação técnica, manual operacional e 
 
 | Arquivo de Documentação | Conteúdo Principal | Público-Alvo |
 | :--- | :--- | :--- |
+| **[`CREDENCIAIS_DE_TESTE.md`](./CREDENCIAIS_DE_TESTE.md)** | Credenciais oficiais de demonstração: 1 Admin, 3 Professores e 5 Alunos com roteiro prático de teste no ERP. | Recrutadores, Avaliadores e Visitantes |
 | **[`ARQUITETURA.md`](./ARQUITETURA.md)** | Padrões de projeto, fluxo SSR, segurança OWASP (SQLi/XSS), criptografia Bcrypt e Middleware RBAC (`require_role`). | Desenvolvedores, Engenheiros e Recrutadores |
 | **[`BANCO_DE_DADOS.md`](./BANCO_DE_DADOS.md)** | Modelo Relacional 3NF, Diagrama Entidade-Relacionamento (MER/DER), dicionário das 10 tabelas e lógica de `UPSERT`. | DBAs, Engenheiros e Desenvolvedores Backend |
 | **[`MANUAL_USUARIO.md`](./MANUAL_USUARIO.md)** | Manual prático com passo a passo ilustrativo para Estudantes, Professores e Administradores (Direção escolar). | Alunos, Docentes e Equipe Administrativa |

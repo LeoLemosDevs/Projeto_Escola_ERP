@@ -180,7 +180,7 @@ Clique no botão azul **"🚀 INSTALAR / RESETAR BANCO DE DADOS DA MASTER SCHOOL
 
 ## 🔑 Credenciais de Acesso (Modo Demo)
 
-Você pode avaliar o ERP testando **qualquer um dos 3 perfis**. Na tela de login (`/login.php`), utilize os **botões de preenchimento rápido no rodapé** ou use as credenciais oficiais:
+Você pode avaliar o ERP testando **qualquer um dos perfis**. Na tela de login (`/login.php`), utilize os **botões de preenchimento rápido no rodapé** ou confira a tabela resumida abaixo. Para o roteiro completo com **1 Admin, 3 Professores e 5 Alunos de turmas variadas**, consulte o documento oficial: **[`doc/CREDENCIAIS_DE_TESTE.md`](./doc/CREDENCIAIS_DE_TESTE.md)**.
 
 | Perfil de Acesso | E-mail Institucional | Senha Padrão | Módulo Principal | Acesso Direto |
 | :--- | :--- | :--- | :--- | :--- |
@@ -196,6 +196,7 @@ Toda a documentação arquitetural, guias de usuário e manuais técnicos do pro
 
 | Guia / Módulo | Descrição do Documento |
 | :--- | :--- |
+| 🔑 **[`doc/CREDENCIAIS_DE_TESTE.md`](./doc/CREDENCIAIS_DE_TESTE.md)** | Credenciais oficiais de teste para 1 Admin, 3 Professores (disciplinas diferentes) e 5 Alunos (turmas de G1 a Ensino Médio). |
 | 🏗️ **[`doc/ARQUITETURA.md`](./doc/ARQUITETURA.md)** | Arquitetura SSR do PHP 8, segurança OWASP (PDO/XSS), Bcrypt e Middleware RBAC. |
 | 🗄️ **[`doc/BANCO_DE_DADOS.md`](./doc/BANCO_DE_DADOS.md)** | Modelo Relacional 3NF, Diagrama ER (MER/DER) das 10 tabelas e atomicidade (`UPSERT`). |
 | 📘 **[`doc/MANUAL_USUARIO.md`](./doc/MANUAL_USUARIO.md)** | Passo a passo de uso e fluxos para Estudantes, Docentes e Gestão Escolar. |

@@ -45,8 +45,9 @@ O desenvolvimento da plataforma **Master School ERP & Portal Web** foi concluíd
 
 ## 3. Guia Rápido de Arquivos de Documentação (`/doc`)
 
-1. **[`doc/ARQUITETURA.md`](./ARQUITETURA.md):** Fluxo de requisições, OWASP e RBAC.
-2. **[`doc/BANCO_DE_DADOS.md`](./BANCO_DE_DADOS.md):** Diagrama ER e DDL de 10 tabelas.
+1. **[`doc/CREDENCIAIS_DE_TESTE.md`](./CREDENCIAIS_DE_TESTE.md):** Contas de demonstração (1 Admin, 3 Professores e 5 Alunos) com roteiro prático.
+2. **[`doc/ARQUITETURA.md`](./ARQUITETURA.md):** Fluxo de requisições, OWASP e RBAC.
+3. **[`doc/BANCO_DE_DADOS.md`](./BANCO_DE_DADOS.md):** Diagrama ER e DDL de 10 tabelas.
 3. **[`doc/MANUAL_USUARIO.md`](./MANUAL_USUARIO.md):** Operação por perfil escolar.
 4. **[`doc/GUIA_INSTALACAO_XAMPP.md`](./GUIA_INSTALACAO_XAMPP.md):** Instalação local em XAMPP, WAMP ou Linux.
 5. **[`doc/DESIGN_SYSTEM.md`](./DESIGN_SYSTEM.md):** Guia de estilos, tokens HSL e Glassmorphism.

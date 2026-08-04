@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_turma'])) {
 
     if (!empty($nome)) {
         try {
-            $stmt = $pdo->prepare("INSERT INTO turmas (nome, ano, turno, sala) VALUES (?, ?, ?, ?)");
+            $stmt = $pdo->prepare("INSERT INTO turmas (nome, ano_letivo, turno, sala) VALUES (?, ?, ?, ?)");
             $stmt->execute([$nome, $ano, $turno, $sala]);
             log_system_action($pdo, $_SESSION['user_id'], "Criou turma: $nome ($sala)");
             $success = true;
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_disciplina']))
 }
 
 // Busca turmas e disciplinas
-$turmas = $pdo->query("SELECT * FROM turmas ORDER BY ano DESC, nome ASC")->fetchAll();
+$turmas = $pdo->query("SELECT * FROM turmas ORDER BY ano_letivo DESC, nome ASC")->fetchAll();
 
 $stmtDisc = $pdo->query("
     SELECT d.*, t.nome as turma_nome, u.nome as prof_nome
@@ -151,8 +151,40 @@ $professores = $pdo->query("
     </div>
 </div>
 
+<div class="glass-card" style="margin-bottom: 30px;">
+    <h3 style="font-size: 1.35rem; margin-bottom: 16px; color: #60a5fa;">🏫 Turmas Ativas na Instituição (<?= count($turmas) ?>)</h3>
+    <div class="table-responsive">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome da Turma</th>
+                    <th>Ano Letivo</th>
+                    <th>Turno</th>
+                    <th>Sala / Ambiente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if (empty($turmas)): ?>
+                    <tr><td colspan="5" style="text-align: center;">Nenhuma turma cadastrada no sistema.</td></tr>
+                <?php else: ?>
+                    <?php foreach ($turmas as $t): ?>
+                        <tr>
+                            <td><span class="badge badge-accent">#<?= $t['id'] ?></span></td>
+                            <td><strong><?= htmlspecialchars($t['nome']) ?></strong></td>
+                            <td><?= htmlspecialchars($t['ano_letivo']) ?></td>
+                            <td><span class="badge badge-primary"><?= htmlspecialchars($t['turno']) ?></span></td>
+                            <td><?= htmlspecialchars($t['sala']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+
 <div class="glass-card">
-    <h3 style="font-size: 1.35rem; margin-bottom: 16px;">Disciplinas & Grades Ativas (<?= count($disciplinas) ?>)</h3>
+    <h3 style="font-size: 1.35rem; margin-bottom: 16px; color: #fbbf24;">📚 Disciplinas & Grades Ativas (<?= count($disciplinas) ?>)</h3>
     <div class="table-responsive">
         <table class="data-table">
             <thead>

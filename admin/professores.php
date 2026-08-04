@@ -147,7 +147,7 @@ $professores = $stmtList->fetchAll();
                             <td><strong><?= htmlspecialchars($prof['nome']) ?></strong></td>
                             <td><?= htmlspecialchars($prof['email']) ?></td>
                             <td><?= htmlspecialchars($prof['especialidade']) ?></td>
-                            <td><span class="badge badge-accent"><?= htmlspecialchars($prof['titulacao']) ?></span></td>
+                            <td><span class="badge badge-accent"><?= htmlspecialchars($prof['bio'] ?? 'Professor Titular') ?></span></td>
                             <td style="text-align: right;">
                                 <a href="professores.php?delete=<?= $prof['id'] ?>" onclick="return confirm('Tem certeza que deseja remover este docente?')" class="btn btn-outline" style="color: #f87171; border-color: #ef4444; padding: 4px 10px; font-size: 0.78rem;">
                                     🗑️ Excluir

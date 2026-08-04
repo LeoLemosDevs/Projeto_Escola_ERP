@@ -60,37 +60,43 @@ $noticias = $stmtList->fetchAll();
     </div>
 <?php endif; ?>
 
-<div class="glass-card" style="margin-bottom: 30px;">
-    <h3 style="font-size: 1.35rem; margin-bottom: 16px; color: #60a5fa;">📰 Publicar Novo Aviso ou Evento Escolar</h3>
+<!-- FORMULÁRIO NOVA NOTÍCIA -->
+<div class="glass-card" style="border-top: 3px solid #60a5fa; padding: 32px 28px; margin-bottom: 35px;">
+    <h3 style="font-size: 1.35rem; margin-bottom: 6px; color: #60a5fa; display: flex; align-items: center; gap: 10px;">
+        📰 Publicar Novo Aviso ou Evento Escolar
+    </h3>
+    <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 24px;">
+        Crie comunicados institucionais, eventos acadêmicos, avisos de férias ou destaques estudantis para exibição em tempo real na página inicial da Master School.
+    </p>
     <form method="POST">
         <input type="hidden" name="create_noticia" value="1">
-        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 16px;">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
             <div class="form-group">
-                <label class="form-label">Título da Chamada</label>
-                <input type="text" name="titulo" class="form-input" placeholder="Ex: Feira de Ciências 2026 — Inscrições Abertas" required>
+                <label class="form-label">🏷️ Título da Chamada</label>
+                <input type="text" name="titulo" class="form-input" placeholder="Ex: Feira de Ciências e Tecnologia 2026 — Inscrições Abertas" required>
             </div>
             <div class="form-group">
-                <label class="form-label">Categoria</label>
+                <label class="form-label">📂 Categoria de Publicação</label>
                 <select name="categoria" class="form-select">
-                    <option value="evento">Evento Escolar</option>
-                    <option value="ferias">Férias & Recessos</option>
-                    <option value="aviso">Aviso Acadêmico</option>
-                    <option value="conquista">Alunos Destaques</option>
+                    <option value="evento">🎪 Evento Escolar</option>
+                    <option value="ferias">🏖️ Férias & Recessos</option>
+                    <option value="aviso">📢 Aviso Acadêmico</option>
+                    <option value="conquista">🏆 Alunos Destaques</option>
                 </select>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="form-label">Resumo do Comunicado (Exibido na Home)</label>
-            <textarea name="resumo" rows="3" class="form-textarea" placeholder="Breve descrição da notícia para a comunidade escolar..." required></textarea>
+            <label class="form-label">📝 Resumo do Comunicado (Exibido no Portal Principal)</label>
+            <textarea name="resumo" rows="4" class="form-textarea" placeholder="Digite uma descrição clara e objetiva para a comunidade escolar..." required></textarea>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <label style="cursor: pointer; display: flex; align-items: center; gap: 8px; color: #fbbf24; font-weight: 600;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 8px; padding-top: 16px; border-top: 1px solid rgba(148, 163, 184, 0.15);">
+            <label class="form-checkbox-group" style="color: #fbbf24; font-weight: 600;">
                 <input type="checkbox" name="destaque" value="1">
-                ⭐ Destacar no Mural Principal da Master School
+                ⭐ Destacar no Mural Principal da Master School (Home)
             </label>
-            <button type="submit" class="btn btn-primary" style="padding: 12px 28px;">
+            <button type="submit" class="btn btn-primary" style="padding: 14px 32px; font-weight: 700; font-size: 0.98rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);">
                 📢 Publicar no Portal Principal
             </button>
         </div>

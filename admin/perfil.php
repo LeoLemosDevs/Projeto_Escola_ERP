@@ -68,22 +68,22 @@ $admin = $stmtU->fetch();
             <input type="hidden" name="update_admin" value="1">
 
             <div class="form-group">
-                <label class="form-label">Nome de Gestão</label>
+                <label class="form-label">👤 Nome de Gestão</label>
                 <input type="text" name="nome" class="form-input" value="<?= htmlspecialchars($admin['nome'] ?? '') ?>" required>
             </div>
 
             <div class="form-group">
-                <label class="form-label">E-mail Administrativo</label>
+                <label class="form-label">📧 E-mail Administrativo</label>
                 <input type="email" name="email" class="form-input" value="<?= htmlspecialchars($admin['email'] ?? '') ?>" required>
             </div>
 
             <div class="form-group">
-                <label class="form-label">Nova Senha (Deixe em branco para não alterar)</label>
+                <label class="form-label">🔒 Nova Senha (Deixe em branco para não alterar)</label>
                 <input type="password" name="nova_senha" class="form-input" placeholder="••••••••">
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
-                Salvar Alterações de Perfil &rarr;
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 14px; padding: 14px; font-weight: 700; font-size: 1rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);">
+                💾 Salvar Alterações de Perfil &rarr;
             </button>
         </form>
     </div>

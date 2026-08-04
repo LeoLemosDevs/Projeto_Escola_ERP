@@ -77,44 +77,49 @@ $professores = $stmtList->fetchAll();
     </div>
 <?php endif; ?>
 
-<div class="glass-card" style="margin-bottom: 30px;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-        <h3 style="font-size: 1.3rem; color: #60a5fa;">👨‍🏫 Contratar / Cadastrar Novo Professor</h3>
-        <button type="button" onclick="document.getElementById('formNovoProf').style.display = (document.getElementById('formNovoProf').style.display === 'none') ? 'block' : 'none'" class="btn btn-outline" style="font-size: 0.8rem; padding: 6px 14px;">
+<div class="glass-card" style="border-top: 3px solid #3b82f6; padding: 32px 28px; margin-bottom: 35px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <h3 style="font-size: 1.35rem; color: #60a5fa; display: flex; align-items: center; gap: 10px;">
+            👨‍🏫 Contratar / Cadastrar Novo Professor
+        </h3>
+        <button type="button" onclick="const f = document.getElementById('formNovoProf'); f.style.display = (f.style.display === 'none') ? 'block' : 'none'" class="btn btn-outline" style="font-size: 0.8rem; padding: 6px 14px;">
             Exibir / Ocultar Formulário
         </button>
     </div>
+    <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 24px;">
+        Cadastre um novo docente titular informando seus dados institucionais, e-mail de acesso e área de especialização.
+    </p>
 
-    <form method="POST" id="formNovoProf" style="display: none; border-top: 1px solid var(--glass-border); padding-top: 20px;">
+    <form method="POST" id="formNovoProf" style="border-top: 1px solid var(--glass-border); padding-top: 24px;">
         <input type="hidden" name="create_prof" value="1">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div class="form-group">
-                <label class="form-label">Nome Completo</label>
-                <input type="text" name="nome" class="form-input" placeholder="Ex: Prof. Roberto Mendes" required>
+                <label class="form-label">👤 Nome Completo</label>
+                <input type="text" name="nome" class="form-input" placeholder="Ex: Prof. Dr. Roberto Mendes Silva" required>
             </div>
             <div class="form-group">
-                <label class="form-label">E-mail Institucional</label>
-                <input type="email" name="email" class="form-input" placeholder="roberto@masterschool.edu.br" required>
+                <label class="form-label">📧 E-mail Institucional</label>
+                <input type="email" name="email" class="form-input" placeholder="roberto.mendes@masterschool.edu.br" required>
             </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div class="form-group">
-                <label class="form-label">Especialidade / Disciplina</label>
-                <input type="text" name="especialidade" class="form-input" placeholder="Ex: Física e Mecânica" required>
+                <label class="form-label">🔬 Especialidade / Área de Ensino</label>
+                <input type="text" name="especialidade" class="form-input" placeholder="Ex: Física Quântica e Mecânica" required>
             </div>
             <div class="form-group">
-                <label class="form-label">Titulação Acadêmica</label>
+                <label class="form-label">🎓 Titulação Acadêmica</label>
                 <select name="titulacao" class="form-select">
                     <option value="Especialista">Especialista</option>
-                    <option value="Mestre">Mestre</option>
-                    <option value="Doutor">Doutor / Pós-Doc</option>
+                    <option value="Mestre">Mestre em Educação / Ciências</option>
+                    <option value="Doutor">Doutor / Pós-Doutorado</option>
                 </select>
             </div>
         </div>
 
-        <div style="text-align: right;">
-            <button type="submit" class="btn btn-primary">
+        <div style="text-align: right; margin-top: 10px;">
+            <button type="submit" class="btn btn-primary" style="padding: 14px 32px; font-weight: 700; font-size: 0.98rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);">
                 💾 Confirmar Cadastro de Docente &rarr;
             </button>
         </div>

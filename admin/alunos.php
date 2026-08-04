@@ -67,7 +67,7 @@ if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
 }
 
 // Busca turmas para o select
-$turmas = $pdo->query("SELECT id, nome FROM turmas ORDER BY nome ASC")->fetchAll();
+$turmas = $pdo->query("SELECT id, nome, ano_letivo FROM turmas ORDER BY nome ASC")->fetchAll();
 
 // Busca e Filtra Alunos
 $searchQuery = sanitize_input($_GET['q'] ?? '');
@@ -96,52 +96,57 @@ $alunos = $stmtList->fetchAll();
 <?php endif; ?>
 
 <!-- ACORDEÃO OU CARD DE ADIÇÃO RÁPIDA -->
-<div class="glass-card" style="margin-bottom: 30px;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-        <h3 style="font-size: 1.3rem; color: #60a5fa;">➕ Matricular Novo Aluno no ERP</h3>
-        <button type="button" onclick="document.getElementById('formNovoAluno').style.display = (document.getElementById('formNovoAluno').style.display === 'none') ? 'block' : 'none'" class="btn btn-outline" style="font-size: 0.8rem; padding: 6px 14px;">
+<div class="glass-card" style="border-top: 3px solid #3b82f6; padding: 32px 28px; margin-bottom: 35px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <h3 style="font-size: 1.35rem; color: #60a5fa; display: flex; align-items: center; gap: 10px;">
+            🎓 Matricular Novo Aluno no ERP
+        </h3>
+        <button type="button" onclick="const f = document.getElementById('formNovoAluno'); f.style.display = (f.style.display === 'none') ? 'block' : 'none'" class="btn btn-outline" style="font-size: 0.8rem; padding: 6px 14px;">
             Exibir / Ocultar Formulário
         </button>
     </div>
+    <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 24px;">
+        Cadastre novos alunos vinculando-os a uma turma letiva com geração de matrícula institucional automática.
+    </p>
 
-    <form method="POST" id="formNovoAluno" style="display: none; border-top: 1px solid var(--glass-border); padding-top: 20px;">
+    <form method="POST" id="formNovoAluno" style="border-top: 1px solid var(--glass-border); padding-top: 24px;">
         <input type="hidden" name="create_aluno" value="1">
-        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px;">
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 20px;">
             <div class="form-group">
-                <label class="form-label">Nome Completo</label>
-                <input type="text" name="nome" class="form-input" placeholder="Ex: Ana Clara Silva" required>
+                <label class="form-label">👤 Nome Completo</label>
+                <input type="text" name="nome" class="form-input" placeholder="Ex: Ana Clara Silva Santos" required>
             </div>
             <div class="form-group">
-                <label class="form-label">Matrícula</label>
-                <input type="text" name="matricula" class="form-input" placeholder="MS2026-99" required>
+                <label class="form-label">🎫 Nº Matrícula</label>
+                <input type="text" name="matricula" class="form-input" placeholder="Ex: MS2026-995" required>
             </div>
             <div class="form-group">
-                <label class="form-label">Turma</label>
+                <label class="form-label">🏫 Turma Letiva</label>
                 <select name="turma_id" class="form-select">
                     <?php foreach ($turmas as $t): ?>
-                        <option value="<?= $t['id'] ?>"><?= htmlspecialchars($t['nome']) ?></option>
+                        <option value="<?= $t['id'] ?>"><?= htmlspecialchars($t['nome']) ?> (<?= htmlspecialchars($t['ano_letivo']) ?>)</option>
                     <?php endforeach; ?>
                 </select>
             </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 20px;">
             <div class="form-group">
-                <label class="form-label">E-mail Institucional</label>
-                <input type="email" name="email" class="form-input" placeholder="ana.clara@aluno.masterschool.edu.br" required>
+                <label class="form-label">📧 E-mail Institucional</label>
+                <input type="email" name="email" class="form-input" placeholder="ana.santos@aluno.masterschool.edu.br" required>
             </div>
             <div class="form-group">
-                <label class="form-label">CPF do Aluno</label>
+                <label class="form-label">📄 CPF do Aluno</label>
                 <input type="text" name="cpf" class="form-input" placeholder="000.000.000-00">
             </div>
             <div class="form-group">
-                <label class="form-label">Data de Nascimento</label>
+                <label class="form-label">🎂 Data de Nascimento</label>
                 <input type="date" name="data_nascimento" class="form-input" value="2008-05-10">
             </div>
         </div>
 
-        <div style="text-align: right;">
-            <button type="submit" class="btn btn-primary">
+        <div style="text-align: right; margin-top: 10px;">
+            <button type="submit" class="btn btn-primary" style="padding: 14px 32px; font-weight: 700; font-size: 0.98rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);">
                 💾 Confirmar Matrícula e Criar Conta &rarr;
             </button>
         </div>

@@ -81,23 +81,28 @@ $professores = $pdo->query("
     </div>
 <?php endif; ?>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 35px;">
     <!-- FORMULÁRIO NOVA TURMA -->
-    <div class="glass-card">
-        <h3 style="font-size: 1.3rem; margin-bottom: 16px; color: #60a5fa;">🏫 Cadastrar Nova Turma</h3>
+    <div class="glass-card" style="border-top: 3px solid #3b82f6; padding: 32px 28px;">
+        <h3 style="font-size: 1.35rem; margin-bottom: 6px; color: #60a5fa; display: flex; align-items: center; gap: 10px;">
+            🏫 Cadastrar Nova Turma
+        </h3>
+        <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 24px;">
+            Defina uma nova turma especificando a identificação, ano letivo, turno e sala de aula física.
+        </p>
         <form method="POST">
             <input type="hidden" name="create_turma" value="1">
             <div class="form-group">
-                <label class="form-label">Nome da Turma</label>
-                <input type="text" name="nome" class="form-input" placeholder="Ex: 1ª Série Ensino Médio - C" required>
+                <label class="form-label">🏷️ Nome da Turma</label>
+                <input type="text" name="nome" class="form-input" placeholder="Ex: 1ª Série Ensino Médio — Turma A" required>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
                 <div class="form-group">
-                    <label class="form-label">Ano Letivo</label>
+                    <label class="form-label">📅 Ano Letivo</label>
                     <input type="number" name="ano" class="form-input" value="2026" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Turno</label>
+                    <label class="form-label">🕒 Turno</label>
                     <select name="turno" class="form-select">
                         <option value="Matutino">Matutino</option>
                         <option value="Vespertino">Vespertino</option>
@@ -105,40 +110,47 @@ $professores = $pdo->query("
                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Sala</label>
-                    <input type="text" name="sala" class="form-input" placeholder="Sala 105" required>
+                    <label class="form-label">🚪 Sala / Ambiente</label>
+                    <input type="text" name="sala" class="form-input" placeholder="Sala 105 - Ala Sul" required>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Criar Turma &rarr;</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-weight: 700; font-size: 1rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4); margin-top: 8px;">
+                ✨ Criar Nova Turma &rarr;
+            </button>
         </form>
     </div>
 
     <!-- FORMULÁRIO NOVA DISCIPLINA -->
-    <div class="glass-card">
-        <h3 style="font-size: 1.3rem; margin-bottom: 16px; color: #fbbf24;">📚 Cadastrar Disciplina</h3>
+    <div class="glass-card" style="border-top: 3px solid #fbbf24; padding: 32px 28px;">
+        <h3 style="font-size: 1.35rem; margin-bottom: 6px; color: #fbbf24; display: flex; align-items: center; gap: 10px;">
+            📚 Cadastrar & Vincular Disciplina
+        </h3>
+        <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 24px;">
+            Cadastre uma disciplina com seu código oficial e vincule ao professor responsável na grade curricular.
+        </p>
         <form method="POST">
             <input type="hidden" name="create_disciplina" value="1">
-            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 12px;">
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 16px;">
                 <div class="form-group">
-                    <label class="form-label">Código</label>
-                    <input type="text" name="codigo" class="form-input" placeholder="BIO-101" required>
+                    <label class="form-label">🔢 Código</label>
+                    <input type="text" name="codigo" class="form-input" placeholder="Ex: BIO-101" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Nome da Disciplina</label>
-                    <input type="text" name="nome_disciplina" class="form-input" placeholder="Biologia e Genética" required>
+                    <label class="form-label">📖 Nome da Disciplina</label>
+                    <input type="text" name="nome_disciplina" class="form-input" placeholder="Ex: Biologia Molecular e Genética" required>
                 </div>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                 <div class="form-group">
-                    <label class="form-label">Turma Vinculada</label>
+                    <label class="form-label">🏫 Turma Vinculada</label>
                     <select name="turma_id" class="form-select">
                         <?php foreach ($turmas as $t): ?>
-                            <option value="<?= $t['id'] ?>"><?= htmlspecialchars($t['nome']) ?></option>
+                            <option value="<?= $t['id'] ?>"><?= htmlspecialchars($t['nome']) ?> (<?= htmlspecialchars($t['ano_letivo']) ?>)</option>
                         <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Docente Responsável</label>
+                    <label class="form-label">👨‍🏫 Docente Responsável</label>
                     <select name="prof_id" class="form-select">
                         <?php foreach ($professores as $p): ?>
                             <option value="<?= $p['id'] ?>"><?= htmlspecialchars($p['nome']) ?></option>
@@ -146,7 +158,9 @@ $professores = $pdo->query("
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Vincular Disciplina &rarr;</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-weight: 700; font-size: 1rem; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4); margin-top: 8px;">
+                🔗 Vincular Disciplina &rarr;
+            </button>
         </form>
     </div>
 </div>

@@ -13,15 +13,22 @@ define('APP_NAME', 'Master School');
 define('APP_SUBTITLE', 'Excellence in Brazilian & International Education');
 define('APP_VERSION', '1.0.0');
 
-// Identificação automática da BASE_URL
+// Identificação automática da BASE_URL na raiz do projeto
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) ? "https://" : "http://";
 $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
 $scriptDir = dirname($_SERVER['SCRIPT_NAME'] ?? '/');
-$baseDir = rtrim(str_replace('\\', '/', $scriptDir), '/');
-// Para subdiretórios no XAMPP ou servidor
-if ($baseDir === '') {
-    $baseDir = '';
+$scriptDir = str_replace('\\', '/', $scriptDir);
+
+// Remove subdiretórios do ERP caso a página esteja rodando dentro de um portal
+$subdirs = ['/admin', '/aluno', '/professor', '/config', '/includes', '/api', '/database', '/assets', '/doc'];
+foreach ($subdirs as $sub) {
+    if (substr($scriptDir, -strlen($sub)) === $sub) {
+        $scriptDir = substr($scriptDir, 0, -strlen($sub));
+        break;
+    }
 }
+
+$baseDir = rtrim($scriptDir, '/');
 define('BASE_URL', $protocol . $host . $baseDir);
 
 // Configurações do Sandbox PagSeguro (Simulação para Ambiente XAMPP/Online)

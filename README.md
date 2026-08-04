@@ -8,7 +8,7 @@
 [![XAMPP Ready](https://img.shields.io/badge/XAMPP-1--Click_Install-F37025?style=for-the-badge&logo=xampp&logoColor=white)](https://www.apachefriends.org/)
 [![Design System](https://img.shields.io/badge/UI%2FUX-Glassmorphism%20%26%20HSL-3B82F6?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Security](https://img.shields.io/badge/Security-PDO%20%7C%20RBAC%20%7C%20Bcrypt-10B981?style=for-the-badge)](#-segurança--arquitetura-robusta)
-[![Status](https://img.shields.io/badge/Status-100%25%20Concluído-success?style=for-the-badge)](#)
+[![Status](https://img.shields.io/badge/Status-100%25%20Concluído-success?style=for-the-badge)](https://github.com/LeoLemosDevs/Projeto_Escola_ERP)
 
 <p align="center">
   <strong>Uma solução full-stack sofisticada que combina um Portal Institucional Web moderno com um poderoso ecossistema ERP acadêmico e financeiro, estruturado sob medida com PHP 8, MySQL e um Design System contemporâneo.</strong>
@@ -206,7 +206,7 @@ Se você está avaliando este repositório para uma **oportunidade profissional 
 ### 🏆 Master School ERP — Excelência em Engenharia de Software & Design Digital
 **Desenvolvido como Projeto de Portfólio Full-Stack** • **Todos os direitos reservados © 2026**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](#)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LeoLemosDevs/Projeto_Escola_ERP)
 [![PHP](https://img.shields.io/badge/PHP-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net/)
 
 </div>

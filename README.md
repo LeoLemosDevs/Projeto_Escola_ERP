@@ -190,6 +190,22 @@ Você pode avaliar o ERP testando **qualquer um dos 3 perfis**. Na tela de login
 
 ---
 
+## 📚 Central de Documentação Técnica (`/doc`)
+
+Toda a documentação arquitetural, guias de usuário e manuais técnicos do projeto estão estruturados na pasta **[`/doc`](./doc/INDEX.md)**:
+
+| Guia / Módulo | Descrição do Documento |
+| :--- | :--- |
+| 🏗️ **[`doc/ARQUITETURA.md`](./doc/ARQUITETURA.md)** | Arquitetura SSR do PHP 8, segurança OWASP (PDO/XSS), Bcrypt e Middleware RBAC. |
+| 🗄️ **[`doc/BANCO_DE_DADOS.md`](./doc/BANCO_DE_DADOS.md)** | Modelo Relacional 3NF, Diagrama ER (MER/DER) das 10 tabelas e atomicidade (`UPSERT`). |
+| 📘 **[`doc/MANUAL_USUARIO.md`](./doc/MANUAL_USUARIO.md)** | Passo a passo de uso e fluxos para Estudantes, Docentes e Gestão Escolar. |
+| ⚙️ **[`doc/GUIA_INSTALACAO_XAMPP.md`](./doc/GUIA_INSTALACAO_XAMPP.md)** | Manual estendido de instalação (Windows XAMPP/WAMP/Laragon e Linux). |
+| 🎨 **[`doc/DESIGN_SYSTEM.md`](./doc/DESIGN_SYSTEM.md)** | Tokens CSS, variáveis de cor HSL, Glassmorphism e navegação mobile responsiva. |
+| 💳 **[`doc/API_PAGSEGURO_CHECKOUT.md`](./doc/API_PAGSEGURO_CHECKOUT.md)** | Funcionamento do modal Sandbox interativo (PIX QR Code, Boleto, Cartão 12x). |
+| 🏆 **[`doc/WALKTHROUGH_ENTREGA.md`](./doc/WALKTHROUGH_ENTREGA.md)** | Histórico das 7 fases de entrega e roteiro prático para verificação do portfólio. |
+
+---
+
 ## 💡 Destaques Técnicos para Recrutadores
 
 Se você está avaliando este repositório para uma **oportunidade profissional ou técnica**, observe os seguintes diferenciais arquiteturais do projeto:

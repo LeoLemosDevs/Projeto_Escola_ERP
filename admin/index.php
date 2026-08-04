@@ -56,7 +56,7 @@ $stmtLogs = $pdo->query("
     SELECT l.*, u.nome as usuario_nome, u.role
     FROM system_logs l
     LEFT JOIN usuarios u ON l.usuario_id = u.id
-    ORDER BY l.criado_em DESC
+    ORDER BY l.data_hora DESC
     LIMIT 6
 ");
 $ultimosLogs = $stmtLogs->fetchAll();

@@ -14,7 +14,7 @@ $message = '';
 $success = false;
 
 // 1. PUBLICAR NOVO COMUNICADO / NOTÍCIA
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_noticia'])) {
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && isset($_POST['create_noticia'])) {
     $titulo = sanitize_input($_POST['titulo'] ?? '');
     $resumo = sanitize_input($_POST['resumo'] ?? '');
     $categoria = sanitize_input($_POST['categoria'] ?? 'evento');
@@ -23,8 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_noticia'])) {
     if (!empty($titulo) && !empty($resumo)) {
         try {
             $stmt = $pdo->prepare("
-                INSERT INTO noticias (titulo, resumo, conteudo, categoria, destaque, publicada) 
-                VALUES (?, ?, ?, ?, ?, 1)
+                INSERT INTO noticias_eventos (titulo, resumo, conteudo, tipo, imagem_url, destaque, data_publicacao) 
+                VALUES (?, ?, ?, ?, NULL, ?, CURDATE())
             ");
             $stmt->execute([$titulo, $resumo, $resumo, $categoria, $destaque]);
             log_system_action($pdo, $_SESSION['user_id'], "Publicou notícia no mural: $titulo");
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_noticia'])) {
 if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
     $delId = (int)$_GET['delete'];
     try {
-        $pdo->prepare("DELETE FROM noticias WHERE id = ?")->execute([$delId]);
+        $pdo->prepare("DELETE FROM noticias_eventos WHERE id = ?")->execute([$delId]);
         log_system_action($pdo, $_SESSION['user_id'], "Excluiu notícia ID $delId");
         $success = true;
         $message = "Notícia removida do mural público com sucesso.";
@@ -49,7 +49,7 @@ if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
     }
 }
 
-$stmtList = $pdo->query("SELECT * FROM noticias ORDER BY id DESC");
+$stmtList = $pdo->query("SELECT * FROM noticias_eventos ORDER BY id DESC");
 $noticias = $stmtList->fetchAll();
 ?>
 <?php include __DIR__ . '/../includes/dashboard_header.php'; ?>
@@ -117,8 +117,8 @@ $noticias = $stmtList->fetchAll();
                     <?php foreach ($noticias as $n): ?>
                         <tr>
                             <td>
-                                <span class="badge <?= $n['categoria'] === 'ferias' ? 'badge-danger' : ($n['categoria'] === 'evento' ? 'badge-primary' : 'badge-accent') ?>">
-                                    <?= strtoupper($n['categoria']) ?>
+                                <span class="badge <?= $n['tipo'] === 'ferias' ? 'badge-danger' : ($n['tipo'] === 'evento' ? 'badge-primary' : 'badge-accent') ?>">
+                                    <?= strtoupper($n['tipo']) ?>
                                 </span>
                             </td>
                             <td>
@@ -128,7 +128,7 @@ $noticias = $stmtList->fetchAll();
                             <td>
                                 <?= $n['destaque'] ? '<span style="color: #fbbf24;">⭐ SIM</span>' : '<span style="color: #64748b;">NÃO</span>' ?>
                             </td>
-                            <td><?= format_date($n['criado_em'], 'd/m/Y') ?></td>
+                            <td><?= format_date($n['data_publicacao'], 'd/m/Y') ?></td>
                             <td style="text-align: right;">
                                 <a href="noticias.php?delete=<?= $n['id'] ?>" onclick="return confirm('Excluir este comunicado do mural?')" class="btn btn-outline" style="color: #f87171; border-color: #ef4444; padding: 4px 10px; font-size: 0.78rem;">
                                     🗑️ Excluir

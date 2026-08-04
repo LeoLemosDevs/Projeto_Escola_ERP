@@ -1,0 +1,11 @@
+# Master School ERP - Git Ignore
+.agents/
+.gemini/
+.vscode/
+*.log
+*.tmp
+.env
+.DS_Store
+Thumbs.db
+node_modules/
+vendor/

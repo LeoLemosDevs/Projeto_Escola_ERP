@@ -1,100 +1,212 @@
-# 🎓 Master School — Projeto ERP Educacional & Portal Web
+<div align="center">
 
-**Master School** é uma plataforma educacional de excelência para ensino médio, bilíngue, projetada no Brasil. Este repositório contém o **Portal Institucional Público** e o **Sistema ERP Completo** com 3 perfis de acesso: **Estudante (Aluno)**, **Professor(a)** e **Administração Geral**.
+# 🎓 MASTER SCHOOL ERP
+### *Plataforma Educacional Integrada & Sistema de Gestão Escolar Completo*
 
----
+[![PHP Version](https://img.shields.io/badge/PHP-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-Relational_DB-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![XAMPP Ready](https://img.shields.io/badge/XAMPP-1--Click_Install-F37025?style=for-the-badge&logo=xampp&logoColor=white)](https://www.apachefriends.org/)
+[![Design System](https://img.shields.io/badge/UI%2FUX-Glassmorphism%20%26%20HSL-3B82F6?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Security](https://img.shields.io/badge/Security-PDO%20%7C%20RBAC%20%7C%20Bcrypt-10B981?style=for-the-badge)](#-segurança--arquitetura-robusta)
+[![Status](https://img.shields.io/badge/Status-100%25%20Concluído-success?style=for-the-badge)](#)
 
-## ✨ Destaques de Design & Arquitetura
+<p align="center">
+  <strong>Uma solução full-stack sofisticada que combina um Portal Institucional Web moderno com um poderoso ecossistema ERP acadêmico e financeiro, estruturado sob medida com PHP 8, MySQL e um Design System contemporâneo.</strong>
+</p>
 
-- 🎨 **Design System Premium (HSL & Glassmorphism):** Interface contemporânea em tons marinhos profundo, azul vibrante e acentos dourados, com cards com efeito vidro fosco (`backdrop-filter: blur`), tipografia **Outfit / Inter** e animações dinâmicas.
-- 📱 **100% Responsivo & Mobile-Ready:** Menu de navegação animado com gaveta lateral em dispositivos móveis, tabelas auto-ajustáveis e modais de checkout responsivos.
-- 🛡️ **Segurança em Camadas (PDO & RBAC):** Consultas preparadas do PDO contra Injeção SQL, sanitização de saídas (`htmlspecialchars`), senhas protegidas com `bcrypt` e controle de permissões baseado em perfil (`require_role`).
-- 💳 **Módulo Financeiro Integrado (Simulador PagSeguro):** Checkout modal interativo permitindo quitação imediata via **PIX (QR Code e Copia-e-Cola)**, **Boleto Bancário (Linha Digitável)** ou **Cartão de Crédito**.
-- 📈 **Executive Analytics (Chart.js):** Painel do administrador com gráficos de barras (desempenho de notas por disciplina) e rosca (receita liquidada, pendente e em atraso).
-- 🛡️ **Trilha de Auditoria e Logs:** Histórico de eventos gravado na tabela `system_logs` contendo IP, usuário, ação e carimbo de tempo.
-
----
-
-## 🛠️ Stack Tecnológica
-
-- **Backend:** PHP 8 (Orientado a objetos, Modular, com sessões limpas)
-- **Banco de Dados:** MySQL / MariaDB (Ambiente padrão **XAMPP**)
-- **Estilização:** Vanilla CSS Moderno (`assets/css/design-system.css`, `assets/css/style.css`, `assets/css/dashboard.css`)
-- **Interatividade Frontend:** Vanilla JavaScript ES6+ & Chart.js
-
----
-
-## 🚀 Como Instalar e Executar no XAMPP (1-Clique)
-
-1. **Instale o XAMPP** (ou similar como WAMP/Laragon) com Apache e MySQL.
-2. Copie ou clone a pasta deste projeto para o diretório de publicação web:
-   ```bash
-   C:\xampp\htdocs\Projeto_Escola_ERP
-   ```
-3. Abra o **Painel de Controle do XAMPP** e inicie os serviços **Apache** e **MySQL**.
-4. Acesse o **Instalador Web 1-Clique** pelo navegador:
-   ```url
-   http://localhost/Projeto_Escola_ERP/install.php
-   ```
-5. Clique no botão azul **"🚀 INSTALAR / RESETAR BANCO DE DADOS DA MASTER SCHOOL"**.
-   - O script criará o banco `master_school_erp`, construirá todas as 10 tabelas relacionais com chaves estrangeiras e preencherá a escola com professores, alunos, turmas, notas, chamada e notícias de demonstração.
+[✨ Visão Geral](#-visão-geral-do-projeto) •
+[🎨 Identidade Visual](#-identidade-visual--design-system-premium) •
+[🚀 Módulos do Sistema](#-principais-módulos--funcionalidades) •
+[🛠️ Stack & Arquitetura](#-stack-tecnológica--arquitetura) •
+[⚡ Instalação em 60s](#-instalação--execução-em-60-segundos-xampp) •
+[🔑 Credenciais Demo](#-credenciais-de-acesso-modo-demo) •
+[💡 Para Recrutadores](#-destaques-técnicos-para-recrutadores)
 
 ---
 
-## 🔑 Credenciais de Acesso ao ERP (Modo Demo)
+</div>
 
-Você pode testar qualquer um dos 3 perfis pela tela de login (`http://localhost/Projeto_Escola_ERP/login.php`) utilizando os **botões de preenchimento rápido 1-clique** ou com as seguintes credenciais:
+## ✨ Visão Geral do Projeto
 
-| Perfil | E-mail de Acesso | Senha Padrão | Painel Inicial |
-| :--- | :--- | :--- | :--- |
-| 🎓 **Aluno** | `lucas.mendes@aluno.masterschool.edu.br` | `aluno123` | `/aluno/index.php` |
-| 👨‍🏫 **Professor** | `carlos.silva@masterschool.edu.br` | `prof123` | `/professor/index.php` |
-| ⚙️ **Admin** | `admin@masterschool.edu.br` | `admin123` | `/admin/index.php` |
+O **Master School ERP** foi concebido como um projeto de **nível empresarial e portfólio de excelência**, demonstrando o domínio completo do ciclo de desenvolvimento de software full-stack sem a dependência de frameworks monolíticos.
+
+O sistema divide-se em duas esferas perfeitamente integradas:
+1. **🌐 Portal Institucional Público:** Um site de alto padrão para a **Master School** (escola brasileira bilíngue de ensino médio), repleto de animações interativas, mural de comunicados e apresentação da infraestrutura.
+2. **🔐 ERP Educacional Multiperfil (Área Restrita):** Um centro de comando escolar seguro com perfis de **Aluno**, **Professor** e **Administrador**, contemplando desde boletins de frequência anual até Analytics em **Chart.js** e checkout financeiro simulado via **PagSeguro**.
 
 ---
 
-## 📂 Estrutura Modular de Diretórios
+## 🎨 Identidade Visual & Design System Premium
 
+A experiência do usuário (UI/UX) foi projetada para encantar desde o primeiro segundo:
+- 🌌 **Paleta de Cores HSL Contemporânea:** Tons de marinho profundo (*Deep Navy* `#0a1128`), azul real vibrante (`#3b82f6`) e acentos dourados imperiais (`#fbbf24`), transmitindo prestígio e autoridade acadêmica.
+- 💎 **Glassmorphism & Frosted Glass:** Uso extensivo de superfícies translúcidas com desfoque óptico (`backdrop-filter: blur(16px)`), bordas suaves com reflexo sutil e sombras difusas para uma profundidade imersiva.
+- ⚡ **Micro-animações & Responsividade Total:** Navegação com menu lateral (*Drawer*) em dispositivos móveis, transições suaves nos cards institucionais e modais interativos com feedback visual imediato (*Toasts*).
+- 🔤 **Tipografia de Alta Legibilidade:** Combinação harmônica das fontes modernas **Outfit** (cabeçalhos expressivos) e **Inter** (interfaces dinâmicas e tabelas de dados).
+
+---
+
+## 🚀 Principais Módulos & Funcionalidades
+
+```mermaid
+graph TD
+    A[Portal Público Master School] --> B[Hero, Missão, Unidades, Docentes]
+    A --> C[Mural de Notícias em Tempo Real]
+    D[Tela de Login Multiperfil] --> E[🎓 Painel do Aluno]
+    D --> F[👨‍🏫 Painel do Professor]
+    D --> G[⚙️ Painel do Administrador]
+    
+    E --> E1[Boletim 1º ao 4º Bimestre]
+    E --> E2[Chamada & Frequência Anual]
+    E --> E3[Checkout PagSeguro PIX/Boleto/Cartão]
+    
+    F --> F1[Diário de Chamada em Lote]
+    F --> F2[Lançamento de Notas & Parecer]
+    F --> F3[Grade de Horários]
+    
+    G --> G1[KPIs & Analytics Chart.js]
+    G --> G2[CRUD Completo: Alunos, Docentes, Turmas]
+    G --> G3[Gestão do Mural Escolar & Auditoria IP]
 ```
+
+### 1. 🌐 Portal Institucional (8 Páginas Públicas)
+- **Página Inicial (`index.php`):** Hero section animada com chamada de impacto, **Mural Acadêmico** alimentado diretamente pelo banco de dados (recessos, férias, eventos e comunicados) e vitrine de **Alunos Destaques**.
+- **Institucional Completo:** Páginas dedicadas à **História da Instituição** (`quem-somos.php`), **Missão, Visão e Valores** (`missao-visao-valores.php`), **Infraestrutura e Campi** (`unidades.php`), **Vitrine Docente** (`professores.php`), **Carreira** (`trabalhe-conosco.php`) e **Ouvidoria** (`contato.php`).
+
+### 2. 🔐 Autenticação Inteligente & Segurança (RBAC)
+- **Tela de Login Premium (`login.php`):** Interface com abas visuais para transição rápida entre **Estudante**, **Professor** e **Gestão**.
+- **⚡ Modo Demonstração 1-Clique:** Botões interativos de teste rápido no rodapé do login que preenchem automaticamente as credenciais para avaliação em portfólio.
+- **Segurança em Camadas:**
+  - Consultas protegidas contra Injeção SQL com **Prepared Statements PDO**.
+  - Hash criptográfico com **Bcrypt (`password_hash`)**.
+  - Controle rigoroso de rotas via Middleware `require_role()`.
+  - **Trilha de Auditoria (`system_logs`):** Monitoramento contínuo com gravação do carimbo de tempo, IP do cliente, usuário e ação executada.
+
+### 3. 🎓 Módulo Estudante (Aluno)
+- **Boletim Consolidado:** Apresentação das notas do 1º ao 4º Bimestre (0 a 10) e média final com destaque visual, acompanhadas de **observações pedagógicas** personalizadas pelo professor.
+- **Controle de Assiduidade:** Histórico da chamada anual indicando percentual de frequência, presenças, faltas e justificativas.
+- **💳 Checkout PagSeguro Simulado (`aluno/financeiro.php`):**
+  - Modal interativo programado em Vanilla JS (`payment.js`) reproduzindo a experiência real de pagamento online.
+  - Abas funcionais para pagamento instantâneo via **PIX** (com geração de QR Code e código *Copia e Cola*), **Boleto Bancário** (linha digitável e PDF) ou **Cartão de Crédito** (até 12x).
+  - Quitação de mensalidades com baixa em tempo real e atualização de status na base de dados.
+
+### 4. 👨‍🏫 Módulo Docente (Professor)
+- **Diário de Chamada em Lote (`professor/chamada.php`):** Seleção ágil por turma, disciplina e data da aula. Contém botão de atalho **"✔ Marcar Todos Presentes"** e salva chamadas usando operação atômica de `UPSERT` no MySQL.
+- **Lançamento de Avaliações (`professor/notas.php`):** Interface otimizada para digitação de notas bimestrais e inserção de parecer descritivo por aluno.
+- **Grade Curricular (`professor/horarios.php`):** Visualização de horários de aula, turnos e salas do corpo docente.
+
+### 5. ⚙️ Módulo de Gestão Geral (Administrador)
+- **Centro de Comando & KPIs (`admin/index.php`):** Painel de bordo com métricas em tempo real (Total de Alunos, Professores, Turmas, Receita Paga e a Receber).
+- **📊 Analytics Interativos com Chart.js:**
+  - *Gráfico de Barras:* Desempenho Geral por Disciplina (média cumulativa do 1º ao 4º Bimestre).
+  - *Gráfico de Rosca:* Distribuição Financeira (mensalidades pagas vs. pendentes vs. em atraso).
+- **CRUD Completo de Gestão Escolar:**
+  - Gestão total de **Estudantes** (`admin/alunos.php`), **Corpo Docente** (`admin/professores.php`), **Turmas & Grades** (`admin/turmas.php`) e do **Mural da Página Inicial** (`admin/noticias.php`).
+  - Painel de visualização da **Trilha de Auditoria do Sistema** (`admin/logs.php`).
+
+---
+
+## 🛠️ Stack Tecnológica & Arquitetura
+
+O projeto foi edificado seguindo padrões de engenharia de software limpos, separação de responsabilidades e foco em performance:
+
+| Camada | Tecnologia | Detalhes & Aplicação |
+| :--- | :--- | :--- |
+| **Linguagem Backend** | **PHP 8+** | PHP Orientado a Objetos e Estruturado, sessões seguras e sanitização de dados |
+| **Banco de Dados** | **MySQL / MariaDB** | Modelagem relacional 3NF com 10 tabelas, chaves estrangeiras (`FK`) e integridade referencial |
+| **Camada de Dados** | **PHP PDO** | Abstração de banco de dados com `Prepared Statements` (Prevenção SQL Injection) |
+| **Design / Frontend** | **Vanilla CSS Moderno** | Design System em tokens CSS (`design-system.css`), variáveis HSL e layouts CSS Grid/Flexbox |
+| **Interatividade** | **Vanilla JS ES6+** | Modais responsivos, animações DOM, feedback Toast e lógica de checkout |
+| **Visualização de Dados** | **Chart.js 4.x** | Biblioteca gráfica para exibição de métricas analíticas executivas |
+| **Servidor & Ambiente** | **Apache / XAMPP** | Pronto para rodar em servidores locais XAMPP, WAMP, Laragon ou ambientes Linux/Docker |
+
+### 📂 Estrutura de Pastas do Repositório
+
+```bash
 Projeto_Escola_ERP/
-├── config/
-│   ├── config.php            # Configurações globais e helpers (APP_NAME, rotas, logs)
-│   └── database.php          # Conexão PDO segura ao MySQL
-├── database/
-│   └── schema.sql            # Script SQL DDL + DML completo (10 tabelas)
-├── assets/
-│   ├── css/
-│   │   ├── design-system.css # Tokens CSS HSL, Glassmorphism, modo escuro/claro
-│   │   ├── style.css         # Layout do portal público institucional
-│   │   └── dashboard.css     # Estilos dos 3 painéis (aluno, prof, admin)
-│   └── js/
-│       ├── main.js           # Menu animado, modais e feedback toast
-│       └── payment.js        # Checkout interativo do PagSeguro (PIX, Boleto, Cartão)
-├── includes/
-│   ├── header.php            # Cabeçalho global público
-│   ├── footer.php            # Rodapé global público
-│   ├── auth_check.php        # Middleware de proteção RBAC (require_role)
-│   ├── dashboard_header.php  # Sidebar e Topbar do ERP
-│   └── dashboard_footer.php  # Fechamento do layout do ERP
-├── admin/                    # Módulo Administrativo (Chart.js, CRUD Alunos, Profs, Turmas, Notícias, Logs)
-├── professor/                # Módulo Docente (Chamada em lote, Notas bimestrais 1-4, Grade)
-├── aluno/                    # Módulo Estudante (Boletim de notas e frequência, Perfil, PagSeguro)
-├── index.php                 # Página Principal (Hero animado, mural de notícias, carrossel de alunos)
-├── quem-somos.php            # História da instituição
-├── missao-visao-valores.php  # Cards animados institucionais
-├── unidades.php              # Campi e laboratórios
-├── trabalhe-conosco.php      # Portal de vagas
-├── professores.php           # Vitrine do corpo docente
-├── contato.php               # Ouvidoria e canais diretos
-├── login.php                 # Login multiperfil com abas e atalhos demo
-├── esqueci-senha.php         # Recuperação / simulação de reset de senha
-├── logout.php                # Encerramento seguro de sessão
-└── install.php               # Instalador Web 1-Clique do banco de dados
+├── 📁 config/
+│   ├── config.php                 # Helpers globais, constantes, sanitização e logs de auditoria
+│   └── database.php               # Conexão PDO com auto-criação do banco relacional
+├── 📁 database/
+│   └── schema.sql                 # Script DDL + DML com 10 tabelas e dados de demonstração
+├── 📁 assets/
+│   ├── 📁 css/
+│   │   ├── design-system.css      # Design tokens, modo escuro/claro e estilos Glassmorphic
+│   │   ├── style.css              # Estilização das 8 páginas públicas institucionais
+│   │   └── dashboard.css          # Layout unificado da área restrita do ERP (Sidebar/Topbar)
+│   └── 📁 js/
+│       ├── main.js                # Lógica de gaveta móvel (drawer), modais e toasts
+│       └── payment.js             # Simulador de checkout PagSeguro (PIX, Boleto e Cartão)
+├── 📁 includes/
+│   ├── header.php / footer.php    # Templates globais públicos
+│   ├── auth_check.php             # Middleware RBAC (proteção de rotas require_role)
+│   └── dashboard_header.php       # Menu lateral dinâmico baseado no perfil do usuário
+├── 📁 admin/                      # Módulo Administração Geral (Analytics Chart.js, CRUDs, Logs)
+├── 📁 professor/                  # Módulo Docente (Chamada em lote, Notas bimestrais, Grade)
+├── 📁 aluno/                      # Módulo Estudante (Boletim online, Frequência, Checkout)
+├── 📄 index.php                   # Portal Principal (Hero animado, Destaques, Mural)
+├── 📄 login.php                   # Autenticação multiperfil com atalhos de demonstração
+├── 📄 install.php                 # Instalador Web Interativo 1-Clique do Banco de Dados
+└── 📄 README.md                   # Documentação oficial do projeto
 ```
 
 ---
 
-## 📜 Licença & Autoria
+## ⚡ Instalação & Execução em 60 Segundos (XAMPP)
 
-Desenvolvido exclusivamente para a **Master School** por **Leo Lemos / Master School ERP Dev Team**.
-Todos os direitos reservados &copy; 2026.
+O projeto possui um **Instalador Web 1-Clique** que cria o banco de dados e insere todos os registros de demonstração sem que você precise digitar um único comando SQL!
+
+### Passo 1: Copiar o Projeto
+Com o **XAMPP** instalado no Windows, copie ou clone esta pasta para o diretório de publicação web:
+```bash
+C:\xampp\htdocs\Projeto_Escola_ERP
+```
+*(Nota: Os links simbólicos/junções também permitem acessar por `http://localhost/master-school`)*
+
+### Passo 2: Iniciar os Serviços
+Abra o **Painel de Controle do XAMPP** e clique em **Start** nos módulos:
+- 🟢 **Apache**
+- 🟢 **MySQL**
+
+### Passo 3: Executar o Instalador 1-Clique no Navegador
+Abra o navegador e acesse a página de instalação:
+```url
+http://localhost/Projeto_Escola_ERP/install.php
+```
+Clique no botão azul **"🚀 INSTALAR / RESETAR BANCO DE DADOS DA MASTER SCHOOL"**.
+> ✔️ O instalador construirá o banco `master_school_erp`, criará todas as 10 tabelas relacionais (`usuarios`, `alunos`, `professores`, `turmas`, `disciplinas`, `notas`, `frequencia`, `mensalidades`, `noticias`, `system_logs`) e preencherá com dados de teste em menos de 2 segundos.
+
+---
+
+## 🔑 Credenciais de Acesso (Modo Demo)
+
+Você pode avaliar o ERP testando **qualquer um dos 3 perfis**. Na tela de login (`/login.php`), utilize os **botões de preenchimento rápido no rodapé** ou use as credenciais oficiais:
+
+| Perfil de Acesso | E-mail Institucional | Senha Padrão | Módulo Principal | Acesso Direto |
+| :--- | :--- | :--- | :--- | :--- |
+| 🎓 **Estudante (Aluno)** | `lucas.mendes@aluno.masterschool.edu.br` | `aluno123` | Boletim, Frequência, PagSeguro | [`/aluno/index.php`](http://localhost/Projeto_Escola_ERP/aluno/index.php) |
+| 👨‍🏫 **Professor(a)** | `carlos.silva@masterschool.edu.br` | `prof123` | Diário em Lote, Notas 1-4 Bimestre | [`/professor/index.php`](http://localhost/Projeto_Escola_ERP/professor/index.php) |
+| ⚙️ **Admin (Direção)** | `admin@masterschool.edu.br` | `admin123` | Gráficos Chart.js, CRUDs, Auditoria | [`/admin/index.php`](http://localhost/Projeto_Escola_ERP/admin/index.php) |
+
+---
+
+## 💡 Destaques Técnicos para Recrutadores
+
+Se você está avaliando este repositório para uma **oportunidade profissional ou técnica**, observe os seguintes diferenciais arquiteturais do projeto:
+1. **Domínio de PHP Puro sem Boilerplate:** Demonstração prática de organização de código PHP 8 com separação clara de responsabilidades, reutilização de layouts via `includes/` e estruturação de funções de utilidade.
+2. **Design System Proprio (Zero Dependências de CSS Monolítico):** Todo o sistema visual foi construído a partir do zero utilizando variáveis CSS (`HSL`), flexbox, grid e técnicas modernas de *Glassmorphism*, garantindo alta performance no tempo de carregamento.
+3. **Padrão de Segurança Enterprise:** Middleware `require_role()` protegendo arquivos internos contra acesso não autorizado de nível hierárquico inferior, prevenção ativa contra Injeção SQL em 100% das queries via PDO e senhas criptografadas.
+4. **Engenharia de Usabilidade:** Criação de facilitadores para portfólio como o **Instalador Web 1-Clique (`install.php`)** e os **Botões de Preenchimento Demo no Login**, permitindo que qualquer avaliador teste a aplicação em segundos.
+5. **Integrações Práticas:** Módulo financeiro com simulação realista de **PagSeguro (PIX, Boleto e Cartão)** e visualização analítica com **Chart.js**.
+
+---
+
+<div align="center">
+
+### 🏆 Master School ERP — Excelência em Engenharia de Software & Design Digital
+**Desenvolvido como Projeto de Portfólio Full-Stack** • **Todos os direitos reservados © 2026**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](#)
+[![PHP](https://img.shields.io/badge/PHP-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net/)
+
+</div>

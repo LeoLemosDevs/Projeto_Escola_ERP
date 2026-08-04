@@ -15,7 +15,16 @@ Bem-vindo(a) ao acervo oficial de documentação técnica, manual operacional e 
 | **[`GUIA_INSTALACAO_XAMPP.md`](./GUIA_INSTALACAO_XAMPP.md)** | Guia de ambiente e instalação interativa 1-Clique em XAMPP, WAMP, Laragon ou servidores Linux/Docker. | Usuários Finais, DevOps e Avaliadores |
 | **[`DESIGN_SYSTEM.md`](./DESIGN_SYSTEM.md)** | Paleta de cores HSL, tokens CSS, técnica de efeito *Glassmorphism*, tipografia Google Fonts e menu mobile dinâmico. | Designers de Interface (UI/UX) e Frontend Devs |
 | **[`API_PAGSEGURO_CHECKOUT.md`](./API_PAGSEGURO_CHECKOUT.md)** | Arquitetura do modal de Checkout Sandbox para PIX (QR Code / Copia-e-Cola), Boleto Bancário e Cartão de Crédito. | Desenvolvedores Full-Stack e Avaliadores |
-| **[`WALKTHROUGH_ENTREGA.md`](./WALKTHROUGH_ENTREGA.md)** | Consolidado das 7 fases entregues, guias de validação e tabela completa de credenciais de teste de demonstração. | Todos os visitantes do portfólio |
+| **[`WALKTHROUGH_ENTREGA.md`](./WALKTHROUGH_ENTREGA.md)** | Consolidado das 8 fases entregues, guias de validação e tabela completa de credenciais de teste de demonstração. | Todos os visitantes do portfólio |
+
+---
+
+## 💾 Cópias de Segurança & Snapshot (`/backup`)
+
+Para fins de portfólio e contingência, o repositório disponibiliza na pasta raiz **[`../backup`](../backup/README.md)** um snapshot completo contendo:
+- `master_school_erp_schema_backup.sql` (Estrutura 3NF e tabelas)
+- `install_backup.php` (Instalador interativo)
+- `MasterSchool_ERP_v2.0.0_Backup.zip` (Pacote zip portátil)
 
 ---
 

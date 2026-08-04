@@ -27,6 +27,10 @@ O desenvolvimento da plataforma **Master School ERP & Portal Web** foi concluíd
 - [x] **Fase 7: Documentação Técnica & Versionamento no GitHub**
   - README.md com diagramas Mermaid, Badges e guias práticos.
   - Suíte de documentação institucional concentrada na pasta `/doc`.
+- [x] **Fase 8: Redesign Glassmorphism Premium, Credenciais & Backup v2.0.0**
+  - Padronização de todos os formulários administrativos (`alunos`, `turmas`, `professores`, `noticias`, `perfil`) com ícones SVG e inputs escuros retráteis.
+  - Criação da pasta de segurança `/backup` com snapshot SQL, instalador e arquivo `MasterSchool_ERP_v2.0.0_Backup.zip`.
+  - Elaboração do guia oficial de contas demo em `doc/CREDENCIAIS_DE_TESTE.md`.
 
 ---
 

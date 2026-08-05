@@ -202,7 +202,7 @@
 
 .promo-banner-text p {
   font-size: 1rem;
-  color: #cbd5e1;
+  color: rgba(255, 255, 255, 0.88);
   margin: 5px 0 0 0;
 }
 
@@ -591,6 +591,41 @@ body.light-body .glass-card {
 body.light-body .glass-card p,
 body.light-body p {
   color: #475569 !important;
+}
+
+/* ===== EXCEÇÕES: Preservar texto BRANCO em seções com fundo escuro/azul ===== */
+/* Banner azul do topo (Agende uma visita guiada) */
+body.light-body .hero-promo-banner h1,
+body.light-body .hero-promo-banner h2,
+body.light-body .hero-promo-banner h3,
+body.light-body .hero-promo-banner h4,
+body.light-body .hero-promo-banner p,
+body.light-body .hero-promo-banner span,
+body.light-body .promo-banner-text h2,
+body.light-body .promo-banner-text p {
+  color: #ffffff !important;
+}
+
+body.light-body .promo-banner-text p {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* Classe utilitária .on-dark: qualquer seção com fundo escuro/azul recebe texto branco */
+body.light-body .on-dark h1,
+body.light-body .on-dark h2,
+body.light-body .on-dark h3,
+body.light-body .on-dark h4,
+body.light-body .on-dark h5,
+body.light-body .on-dark h6 {
+  color: #ffffff !important;
+}
+
+body.light-body .on-dark p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+body.light-body .on-dark span {
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 body.light-body .text-muted,

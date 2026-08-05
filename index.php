@@ -344,7 +344,7 @@ try {
 </section>
 
 <!-- 5. CALL TO ACTION DE VISITA GUIADA & AGENDAMENTO (EMPOLGANTE E PRONTO PARA VENDA) -->
-<section style="background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 80px 0; color: #ffffff; text-align: center; position: relative; overflow: hidden; border-top: 4px solid var(--master-orange);">
+<section class="on-dark" style="background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 80px 0; color: #ffffff; text-align: center; position: relative; overflow: hidden; border-top: 4px solid var(--master-orange);">
     <div class="container" style="position: relative; z-index: 2; max-width: 800px;">
         <span style="background: rgba(249, 115, 22, 0.2); color: #fb923c; padding: 6px 16px; border-radius: 50px; font-weight: 800; font-size: 0.85rem; border: 1px solid rgba(249, 115, 22, 0.4); display: inline-block; margin-bottom: 20px;">
             ✨ O FUTURO DO SEU FILHO COMEÇA HOJE
@@ -352,7 +352,7 @@ try {
         <h2 style="font-size: 2.8rem; font-weight: 900; margin-bottom: 16px; color: #ffffff;">
             Agende uma visita e encante-se com a Master School.
         </h2>
-        <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 35px; line-height: 1.7;">
+        <p style="font-size: 1.15rem; color: rgba(255,255,255,0.88) !important; margin-bottom: 35px; line-height: 1.7;">
             Venha conversar com nossa coordenação pedagógica, conhecer os laboratórios STEM e descobrir por que lideramos os índices de aprovação nas melhores universidades.
         </p>
         <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">

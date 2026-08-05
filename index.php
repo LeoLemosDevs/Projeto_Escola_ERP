@@ -307,29 +307,30 @@ try {
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
                 <?php foreach ($noticias as $noticia): ?>
                     <?php
-                        $isDestaque = $noticia['tipo'] === 'evento';
-                        $catColor   = $noticia['categoria'] === 'urgente' ? '#ef4444' : ($noticia['categoria'] === 'academico' ? '#3b82f6' : '#10b981');
+                        $tipoNoticia = !empty($noticia['categoria']) ? strtolower($noticia['categoria']) : (!empty($noticia['tipo']) ? strtolower($noticia['tipo']) : 'geral');
+                        $catColor    = ($tipoNoticia === 'urgente' || $tipoNoticia === 'alerta') ? '#ef4444' : (($tipoNoticia === 'evento' || $tipoNoticia === 'academico') ? '#3b82f6' : '#10b981');
+                        $publico     = !empty($noticia['publico_alvo']) ? $noticia['publico_alvo'] : ($tipoNoticia === 'evento' ? 'Comunidade & Pais' : 'Alunos & Docentes');
                     ?>
                     <div style="background: #ffffff; border-radius: 20px; padding: 26px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
                         <div>
                             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
                                 <span style="background: <?= $catColor ?>15; color: <?= $catColor ?>; font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
-                                    <?= htmlspecialchars($noticia['categoria'] ?? 'geral') ?>
+                                    <?= htmlspecialchars($tipoNoticia) ?>
                                 </span>
                                 <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">
-                                    <?= date('d/m/Y', strtotime($noticia['data_publicacao'])) ?>
+                                    <?= !empty($noticia['data_publicacao']) ? date('d/m/Y', strtotime($noticia['data_publicacao'])) : date('d/m/Y') ?>
                                 </span>
                             </div>
                             <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 10px; line-height: 1.35;">
-                                <?= htmlspecialchars($noticia['titulo']) ?>
+                                <?= htmlspecialchars($noticia['titulo'] ?? 'Comunicado Institucional') ?>
                             </h3>
                             <p style="color: #475569; font-size: 0.93rem; line-height: 1.6; margin-bottom: 20px;">
-                                <?= nl2br(htmlspecialchars(substr($noticia['conteudo'], 0, 160))) ?>...
+                                <?= nl2br(htmlspecialchars(substr($noticia['conteudo'] ?? ($noticia['resumo'] ?? ''), 0, 160))) ?>...
                             </p>
                         </div>
                         <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #f1f5f9; padding-top: 14px;">
                             <span style="font-size: 0.8rem; font-weight: 700; color: #1e3a8a;">
-                                🎯 Público: <?= ucfirst(htmlspecialchars($noticia['publico_alvo'])) ?>
+                                🎯 Público: <?= htmlspecialchars($publico) ?>
                             </span>
                             <a href="<?= base_url('login.php') ?>" style="color: var(--master-orange); font-weight: 800; text-decoration: none; font-size: 0.85rem;">
                                 Ler mais →

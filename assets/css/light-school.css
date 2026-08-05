@@ -27,57 +27,46 @@
   --radius-lg: 24px;
 }
 
-/* 1. BARRA DE DESTAQUES SUPERIOR (TOP ANNOUNCEMENT BAR) */
+/* 1. BARRA DE DESTAQUES SUPERIOR (TOP ANNOUNCEMENT BAR - ESTILO COLÉGIO MASTER) */
 .top-announcement-bar {
-  background: linear-gradient(90deg, #ea580c 0%, #f97316 50%, #ff781f 100%);
+  background: #f97316;
   color: #ffffff;
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 0;
   position: relative;
   z-index: 1001;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .top-bar-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
+  justify-content: center;
+  gap: 14px;
 }
 
-.top-bar-left, .top-bar-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.top-badge {
-  background: #ffffff;
-  color: var(--master-orange-hover);
-  padding: 3px 10px;
+.top-pill-btn {
+  background: #3b82f6;
+  color: #ffffff !important;
+  padding: 3px 14px;
   border-radius: 20px;
-  font-weight: 800;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-.top-bar-link {
-  color: #ffffff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  transition: opacity 0.2s;
 }
 
-.top-bar-link:hover {
-  opacity: 0.85;
-  text-decoration: underline;
+.top-pill-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
 }
 
 /* 2. NAVBAR NO TEMA CLARO (LIGHT SCHOOL THEME) */

@@ -16,22 +16,11 @@ $activePage = $activePage ?? '';
 </head>
 <body class="light-body">
 
-<!-- BARRA DE DESTAQUES SUPERIOR (ESTILO COLÉGIO MASTER) -->
+<!-- BARRA DE DESTAQUES SUPERIOR (ESTILO COLÉGIO MASTER - LINHA ÚNICA E LIMPA) -->
 <div class="top-announcement-bar">
     <div class="container top-bar-container">
-        <div class="top-bar-left">
-            <span class="top-badge">⚡ VEM AÍ O CONEXÃO MASTER 2027</span>
-            <a href="contato.php" class="top-bar-link">🎙️ PODCAST EDU</a>
-            <span style="opacity: 0.7;">|</span>
-            <span>🏛️ Unidades: São Paulo, Campinas & Rio de Janeiro</span>
-        </div>
-        <div class="top-bar-right">
-            <a href="<?= base_url('login.php') ?>" class="top-bar-link">🔒 Portal EDU (Aluno/Professor)</a>
-            <span style="opacity: 0.7;">|</span>
-            <a href="<?= base_url('contato.php') ?>" class="top-bar-link">💬 Master Resolve</a>
-            <span style="opacity: 0.7;">|</span>
-            <a href="#niveis" class="top-bar-link">📚 Livraria & Material</a>
-        </div>
+        <span>📍 VEM AÍ O CONEXÃO MASTER 2027</span>
+        <a href="contato.php" class="top-pill-btn">PODCAST</a>
     </div>
 </div>
 

@@ -6,12 +6,13 @@
 [![PHP Version](https://img.shields.io/badge/PHP-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net/)
 [![MySQL](https://img.shields.io/badge/MySQL-Relational_DB-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![XAMPP Ready](https://img.shields.io/badge/XAMPP-1--Click_Install-F37025?style=for-the-badge&logo=xampp&logoColor=white)](https://www.apachefriends.org/)
-[![Design System](https://img.shields.io/badge/UI%2FUX-Glassmorphism%20%26%20HSL-3B82F6?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Light Theme](https://img.shields.io/badge/UI%2FUX-Light%20Institucional%20v3.0-F97316?style=for-the-badge)](https://github.com/LeoLemosDevs/Projeto_Escola_ERP)
 [![Security](https://img.shields.io/badge/Security-PDO%20%7C%20RBAC%20%7C%20Bcrypt-10B981?style=for-the-badge)](#-segurança--arquitetura-robusta)
+[![Version](https://img.shields.io/badge/Versão-v3.0.0-1e3a8a?style=for-the-badge)](https://github.com/LeoLemosDevs/Projeto_Escola_ERP/releases)
 [![Status](https://img.shields.io/badge/Status-100%25%20Concluído-success?style=for-the-badge)](https://github.com/LeoLemosDevs/Projeto_Escola_ERP)
 
 <p align="center">
-  <strong>Uma solução full-stack sofisticada que combina um Portal Institucional Web moderno com um poderoso ecossistema ERP acadêmico e financeiro, estruturado sob medida com PHP 8, MySQL e um Design System contemporâneo.</strong>
+  <strong>Uma solução full-stack sofisticada que combina um Portal Institucional Web moderno com um poderoso ecossistema ERP acadêmico e financeiro, estruturado sob medida com PHP 8, MySQL e um Design System contemporâneo. Na v3.0.0, toda a identidade visual foi renovada para o padrão <em>Colégio Master</em>: fundo claro, Azul Marinho Real, Laranja Quente e a nova Logomarca Geométrica.</strong>
 </p>
 
 [✨ Visão Geral](#-visão-geral-do-projeto) •
@@ -36,15 +37,28 @@ O sistema divide-se em duas esferas perfeitamente integradas:
 
 ---
 
-## 🎨 Identidade Visual & Design System Premium
+## 🎨 Identidade Visual & Design System Premium — v3.0.0
 
-A experiência do usuário (UI/UX) foi projetada para encantar desde o primeiro segundo:
-- 🌌 **Paleta de Cores HSL Contemporânea:** Tons de marinho profundo (*Deep Navy* `#0a1128`), azul real vibrante (`#3b82f6`) e acentos dourados imperiais (`#fbbf24`), transmitindo prestígio e autoridade acadêmica.
-- 💎 **Glassmorphism & Frosted Glass:** Uso extensivo de superfícies translúcidas com desfoque óptico (`backdrop-filter: blur(16px)`), bordas suaves com reflexo sutil e sombras difusas para uma profundidade imersiva.
-- ⚡ **Micro-animações & Responsividade Total:** Navegação com menu lateral (*Drawer*) em dispositivos móveis, transições suaves nos cards institucionais e modais interativos com feedback visual imediato (*Toasts*).
-- 🔤 **Tipografia de Alta Legibilidade:** Combinação harmônica das fontes modernas **Outfit** (cabeçalhos expressivos) e **Inter** (interfaces dinâmicas e tabelas de dados).
+A experiência do usuário (UI/UX) foi completamente repaginada na versão **3.0.0** para o padrão **Colégio Master** (inspirado em portais educacionais de excelência como o **Colmaster.com.br**):
+
+- 🌅 **Tema Claro Institucional (`light-body` / `dashboard-light-theme`):** Substituição do dark mode por fundo branco-gelo (`#f8fafc`), cards brancos com bordas suaves `#e2e8f0` e sombras de elevação leves — transmitindo profissionalismo e confiança para os pais e alunos.
+- 🔷 **Paleta Colégio Master:** Azul Marinho Real (`#1e3a8a`), Azul Royal Vibrante (`#2563eb`), Laranja Quente (`#f97316`) para CTAs e ênfase, e Branco Puro como superfície base.
+- 🏷️ **Logomarca Geométrica Master School:** Criação de um elemento de identidade visual proprietário composto por 4 formas geométricas coloridas (quadrado, arco, círculo e estrela), presente em todas as páginas institucionais e na sidebar do ERP.
+- ⚡ **Micro-animações & Responsividade Total:** Navegação com menu lateral em dispositivos móveis, banner pulsante `MATRÍCULAS 2027`, galeria de fotos reais de alunos e eventos com efeito hover.
+- 🔤 **Tipografia de Alta Legibilidade:** Fontes **Outfit** (cabeçalhos expressivos) e **Inter** (interfaces e tabelas), com contrastes WCAG corrigidos — texto branco em fundos azuis, texto escuro em fundos claros.
 
 ---
+
+## 📋 Histórico de Versões
+
+| Versão | Data | Destaque |
+| :--- | :--- | :--- |
+| **v1.0.0** | 2026-07 | Fundação: Banco de dados, RBAC, 3 painéis ERP funcionais |
+| **v2.0.0** | 2026-07 | Redesign Glassmorphism, formulários premium, backup SQL, credenciais demo |
+| **v3.0.0** | 2026-08 | 🌟 **Nova Identidade Visual Clara Institucional** — Logomarca Geométrica, tema Colégio Master em todo o site e painéis ERP, correções de contraste WCAG e warnings PHP |
+
+---
+
 
 ## 🚀 Principais Módulos & Funcionalidades
 

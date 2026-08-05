@@ -188,16 +188,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 y: {
                     beginAtZero: true,
                     max: 10,
-                    grid: { color: 'rgba(255, 255, 255, 0.06)' },
-                    ticks: { color: '#94a3b8' }
+                    grid: { color: 'rgba(0, 0, 0, 0.08)' },
+                    ticks: { color: '#475569', font: { weight: '600' } }
                 },
                 x: {
-                    grid: { color: 'rgba(255, 255, 255, 0.06)' },
-                    ticks: { color: '#94a3b8' }
+                    grid: { color: 'rgba(0, 0, 0, 0.08)' },
+                    ticks: { color: '#475569', font: { weight: '600' } }
                 }
             },
             plugins: {
-                legend: { labels: { color: '#f8fafc' } }
+                legend: { labels: { color: '#0f172a', font: { weight: '700' } } }
             }
         }
     });
@@ -211,19 +211,19 @@ document.addEventListener('DOMContentLoaded', () => {
             datasets: [{
                 data: <?= json_encode($finValues) ?>,
                 backgroundColor: [
-                    'rgba(16, 185, 129, 0.8)', // Pago
-                    'rgba(251, 191, 36, 0.8)', // Pendente
-                    'rgba(239, 68, 68, 0.8)'   // Atrasado
+                    'rgba(16, 185, 129, 0.85)', // Pago
+                    'rgba(251, 191, 36, 0.85)', // Pendente
+                    'rgba(239, 68, 68, 0.85)'   // Atrasado
                 ],
-                borderColor: '#1e293b',
-                borderWidth: 2
+                borderColor: '#ffffff',
+                borderWidth: 3
             }]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
-                legend: { position: 'bottom', labels: { color: '#f8fafc' } }
+                legend: { position: 'bottom', labels: { color: '#0f172a', font: { weight: '700' } } }
             }
         }
     });

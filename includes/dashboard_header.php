@@ -23,23 +23,32 @@ $activeModule = $activeModule ?? 'home';
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url('assets/css/design-system.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/dashboard.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/light-school.css') ?>">
     <!-- Chart.js para gráficos de desempenho -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="<?= base_url('assets/js/main.js') ?>" defer></script>
 </head>
-<body>
+<body class="light-body dashboard-light-theme">
 
 <div class="dashboard-wrapper">
     <!-- BARRA LATERAL (SIDEBAR) -->
     <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <a href="<?= base_url('index.php') ?>" style="display: flex; align-items: center; gap: 10px;">
-                <div style="width: 38px; height: 38px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white;">
-                    MS
+        <div class="sidebar-header" style="height: 86px; padding: 0 16px;">
+            <a href="<?= base_url('index.php') ?>" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                <div class="master-logo" style="transform: scale(0.65); transform-origin: left center; margin-right: -42px; cursor: pointer;">
+                    <div class="master-logo-text">
+                        <span class="master-logo-subtitle" style="color: #64748b;">COLÉGIO & GRUPO</span>
+                        <span class="master-logo-title" style="font-size: 1.85rem;"><span class="text-master">master</span> <span class="text-school">school</span></span>
+                    </div>
+                    <div class="master-logo-shapes">
+                        <div class="shape-square"></div>
+                        <div class="shape-arch"></div>
+                        <div class="shape-circle"></div>
+                        <div class="shape-star"></div>
+                    </div>
                 </div>
-                <div>
-                    <strong style="font-family: 'Outfit'; font-size: 1.1rem; color: #f8fafc; display: block;">Master School</strong>
-                    <span style="font-size: 0.72rem; color: #60a5fa; text-transform: uppercase;">ERP <?= ucfirst($currentRole) ?></span>
+                <div style="padding-top: 4px;">
+                    <span class="badge" style="background: rgba(249, 115, 22, 0.15); color: #ea580c; font-size: 0.68rem; font-weight: 800; border: 1px solid rgba(249, 115, 22, 0.3); padding: 4px 8px; border-radius: 6px;">ERP <?= strtoupper($currentRole) ?></span>
                 </div>
             </a>
         </div>

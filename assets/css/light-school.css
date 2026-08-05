@@ -695,4 +695,225 @@ body.light-body .form-label {
   font-weight: 700 !important;
 }
 
+/* ==========================================================================
+   8. TEMA CLARO INSTITUCIONAL COMPLETO PARA OS PAINÉIS ERP (ADMIN, PROFESSOR E ALUNO)
+   ========================================================================== */
+body.dashboard-light-theme,
+body.dashboard-light-theme .dashboard-wrapper,
+body.dashboard-light-theme .main-container {
+  background: #f8fafc !important;
+  color: #334155 !important;
+}
+
+/* Sidebar Limpa & Estilo Colégio Master */
+body.dashboard-light-theme .sidebar {
+  background: #ffffff !important;
+  border-right: 1px solid #e2e8f0 !important;
+  box-shadow: 2px 0 25px rgba(0, 0, 0, 0.03) !important;
+}
+
+body.dashboard-light-theme .sidebar-header {
+  border-bottom: 1px solid #f1f5f9 !important;
+  background: #ffffff !important;
+}
+
+body.dashboard-light-theme .sidebar-nav {
+  background: #ffffff !important;
+}
+
+body.dashboard-light-theme .sidebar-link {
+  color: #475569 !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  transition: all 0.2s ease !important;
+}
+
+body.dashboard-light-theme .sidebar-link:hover {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  transform: translateX(4px);
+}
+
+body.dashboard-light-theme .sidebar-link.active {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35) !important;
+  font-weight: 700 !important;
+}
+
+body.dashboard-light-theme .sidebar-footer {
+  border-top: 1px solid #f1f5f9 !important;
+  background: #ffffff !important;
+}
+
+body.dashboard-light-theme .sidebar-footer a {
+  color: #64748b !important;
+  font-weight: 600 !important;
+}
+
+body.dashboard-light-theme .sidebar-footer a:hover {
+  color: #0f172a !important;
+}
+
+/* Topbar Clean */
+body.dashboard-light-theme .topbar {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03) !important;
+}
+
+body.dashboard-light-theme .topbar h1,
+body.dashboard-light-theme .topbar h2,
+body.dashboard-light-theme .topbar strong {
+  color: #0f172a !important;
+}
+
+body.dashboard-light-theme .topbar-user .user-avatar {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+/* Cards dos Painéis ERP (KPIs, Estatísticas e Gráficos) */
+body.dashboard-light-theme .stat-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 18px !important;
+  color: #334155 !important;
+}
+
+body.dashboard-light-theme .stat-card h4 {
+  color: #64748b !important;
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+}
+
+body.dashboard-light-theme .stat-card .value {
+  color: #0f172a !important;
+  font-weight: 800 !important;
+}
+
+body.dashboard-light-theme .glass-card,
+body.dashboard-light-theme .card,
+body.dashboard-light-theme .module-card,
+body.dashboard-light-theme .content-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 20px !important;
+  color: #334155 !important;
+}
+
+body.dashboard-light-theme .glass-card h1,
+body.dashboard-light-theme .glass-card h2,
+body.dashboard-light-theme .glass-card h3,
+body.dashboard-light-theme .glass-card h4,
+body.dashboard-light-theme h1,
+body.dashboard-light-theme h2,
+body.dashboard-light-theme h3,
+body.dashboard-light-theme h4,
+body.dashboard-light-theme h5 {
+  color: #0f172a !important;
+}
+
+body.dashboard-light-theme .text-muted {
+  color: #64748b !important;
+}
+
+/* Sobrescrever cores azuis claras pensadas para fundo escuro nos títulos */
+body.dashboard-light-theme [style*="color: #60a5fa"],
+body.dashboard-light-theme [style*="color: #60A5FA"],
+body.dashboard-light-theme [style*="color: rgb(96, 165, 250)"],
+body.dashboard-light-theme [style*="color: #3b82f6"] {
+  color: #1e3a8a !important;
+}
+
+/* Transformar caixas e banners azuis escuros/pretos em caixas institucionais claras */
+body.dashboard-light-theme [style*="background: linear-gradient(135deg, #1e3a8a"],
+body.dashboard-light-theme [style*="background: #1e3a8a"],
+body.dashboard-light-theme [style*="background: rgba(30, 58, 138"] {
+  background: #eff6ff !important;
+  border: 1px solid #bfdbfe !important;
+  color: #1e3a8a !important;
+}
+
+body.dashboard-light-theme [style*="background: #eff6ff"] h1,
+body.dashboard-light-theme [style*="background: #eff6ff"] h2,
+body.dashboard-light-theme [style*="background: #eff6ff"] h3,
+body.dashboard-light-theme [style*="background: #eff6ff"] h4,
+body.dashboard-light-theme [style*="background: #eff6ff"] p,
+body.dashboard-light-theme [style*="background: #eff6ff"] span {
+  color: #1e3a8a !important;
+}
+
+/* Tabelas e Dados nos Painéis */
+body.dashboard-light-theme .data-table,
+body.dashboard-light-theme table {
+  background: #ffffff !important;
+  color: #334155 !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  width: 100% !important;
+}
+
+body.dashboard-light-theme .data-table th,
+body.dashboard-light-theme table th {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+  padding: 14px 16px !important;
+}
+
+body.dashboard-light-theme .data-table td,
+body.dashboard-light-theme table td {
+  border-bottom: 1px solid #f1f5f9 !important;
+  color: #334155 !important;
+  padding: 14px 16px !important;
+  font-size: 0.92rem !important;
+}
+
+body.dashboard-light-theme .data-table tr:hover td,
+body.dashboard-light-theme table tr:hover td {
+  background: #f8fafc !important;
+}
+
+/* Modais, Formulários e Controles do Dashboard */
+body.dashboard-light-theme .modal-content {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
+  color: #0f172a !important;
+}
+
+body.dashboard-light-theme .form-input,
+body.dashboard-light-theme input[type="text"],
+body.dashboard-light-theme input[type="email"],
+body.dashboard-light-theme input[type="password"],
+body.dashboard-light-theme input[type="number"],
+body.dashboard-light-theme input[type="date"],
+body.dashboard-light-theme textarea,
+body.dashboard-light-theme select {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  border-radius: 10px !important;
+}
+
+body.dashboard-light-theme .form-input:focus,
+body.dashboard-light-theme input:focus,
+body.dashboard-light-theme select:focus,
+body.dashboard-light-theme textarea:focus {
+  border-color: #f97316 !important;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15) !important;
+  outline: none !important;
+}
+
 

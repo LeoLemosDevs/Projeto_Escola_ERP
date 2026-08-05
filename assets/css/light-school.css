@@ -78,6 +78,10 @@
   box-shadow: var(--shadow-sm);
 }
 
+.navbar.light-theme .nav-container {
+  height: 96px !important;
+}
+
 .navbar.light-theme .nav-link {
   color: var(--text-dark) !important;
   font-weight: 600;
@@ -93,30 +97,30 @@
   height: 3px;
 }
 
-/* LOGOMARCA MASTER SCHOOL (GEOMÉTRICA) */
+/* LOGOMARCA MASTER SCHOOL (GEOMÉTRICA - VERSÃO AMPLIADA E DE ALTO DESTAQUE) */
 .master-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
 }
 
 .master-logo-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 .master-logo-subtitle {
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   color: var(--text-muted-light);
   text-transform: uppercase;
 }
 
 .master-logo-title {
-  font-size: 1.6rem;
+  font-size: 2.45rem;
   font-weight: 900;
   letter-spacing: -0.5px;
   font-family: var(--font-heading);
@@ -133,33 +137,34 @@
 .master-logo-shapes {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
+  margin-left: 2px;
 }
 
 .shape-square {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background: var(--master-yellow);
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .shape-arch {
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   background: var(--master-orange);
-  border-top-right-radius: 12px;
+  border-top-right-radius: 18px;
 }
 
 .shape-circle {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background: var(--master-cyan);
   border-radius: 50%;
 }
 
 .shape-star {
-  width: 11px;
-  height: 11px;
+  width: 17px;
+  height: 17px;
   background: var(--master-green);
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
@@ -571,23 +576,123 @@ body.light-body h1,
 body.light-body h2,
 body.light-body h3,
 body.light-body h4,
-body.light-body h5 {
+body.light-body h5,
+body.light-body h6 {
   color: var(--text-dark) !important;
 }
 
 body.light-body .glass-card {
   background: #ffffff !important;
   border: 1px solid var(--border-light) !important;
-  box-shadow: var(--shadow-sm) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07) !important;
   color: var(--text-body) !important;
 }
 
 body.light-body .glass-card p,
 body.light-body p {
-  color: var(--text-body) !important;
+  color: #475569 !important;
 }
 
-body.light-body .text-muted {
+body.light-body .text-muted,
+body.light-body [style*="color: #94a3b8"],
+body.light-body [style*="color: rgb(148, 163, 184)"] {
   color: var(--text-muted-light) !important;
 }
+
+/* Substituir fundos escuros ou azul marinho em cards */
+body.light-body [style*="background: rgba(30, 58, 138"],
+body.light-body [style*="background: rgba(15, 23, 42"] {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+/* Badges e Tags institucionais no tema claro */
+body.light-body .badge-primary {
+  background: rgba(249, 115, 22, 0.15) !important;
+  color: #ea580c !important;
+  border: 1px solid rgba(249, 115, 22, 0.3) !important;
+}
+
+body.light-body .badge-accent {
+  background: rgba(30, 58, 138, 0.1) !important;
+  color: #1e3a8a !important;
+  border: 1px solid rgba(30, 58, 138, 0.2) !important;
+}
+
+/* Botões do sistema institucional */
+body.light-body .btn-primary {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3) !important;
+  font-weight: 700 !important;
+}
+
+body.light-body .btn-primary:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%) !important;
+  transform: translateY(-2px);
+}
+
+body.light-body .btn-outline {
+  background: #ffffff !important;
+  color: #1e3a8a !important;
+  border: 2px solid #1e3a8a !important;
+  box-shadow: none !important;
+  font-weight: 700 !important;
+}
+
+body.light-body .btn-outline:hover {
+  background: #1e3a8a !important;
+  color: #ffffff !important;
+}
+
+/* Abas e seletores de perfil (Login etc.) */
+body.light-body .btn-role {
+  background: #ffffff !important;
+  color: #475569 !important;
+  border: 1px solid #cbd5e1 !important;
+  font-weight: 700 !important;
+  transition: all 0.2s;
+}
+
+body.light-body .btn-role:hover {
+  border-color: #3b82f6 !important;
+  color: #1e3a8a !important;
+}
+
+body.light-body .btn-role.active {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%) !important;
+  color: #ffffff !important;
+  border-color: #1e3a8a !important;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25) !important;
+}
+
+/* Formulários e Inputs no tema claro */
+body.light-body .form-input,
+body.light-body input[type="text"],
+body.light-body input[type="email"],
+body.light-body input[type="password"],
+body.light-body textarea,
+body.light-body select {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+body.light-body .form-input:focus,
+body.light-body input:focus,
+body.light-body textarea:focus,
+body.light-body select:focus {
+  border-color: #f97316 !important;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15) !important;
+  outline: none !important;
+}
+
+body.light-body label,
+body.light-body .form-label {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
 

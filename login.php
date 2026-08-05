@@ -75,11 +75,22 @@ include __DIR__ . '/includes/header.php';
         <div class="glass-card" style="padding: 40px 36px; position: relative;">
             
             <div style="text-align: center; margin-bottom: 30px;">
-                <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; font-weight: 800; margin: 0 auto 16px;">
-                    MS
+                <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                    <div class="master-logo" style="cursor: default;">
+                        <div class="master-logo-text">
+                            <span class="master-logo-subtitle">COLÉGIO & GRUPO</span>
+                            <span class="master-logo-title" style="font-size: 2.2rem;"><span class="text-master">master</span> <span class="text-school">school</span></span>
+                        </div>
+                        <div class="master-logo-shapes">
+                            <div class="shape-square"></div>
+                            <div class="shape-arch"></div>
+                            <div class="shape-circle"></div>
+                            <div class="shape-star"></div>
+                        </div>
+                    </div>
                 </div>
-                <h2 style="font-size: 1.8rem; margin-bottom: 6px;">Portal Educacional ERP</h2>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">
+                <h2 style="font-size: 1.6rem; color: #0f172a; font-weight: 800; margin-bottom: 6px;">Portal Educacional ERP</h2>
+                <p style="color: #64748b; font-size: 0.95rem;">
                     Selecione o seu tipo de perfil e acesse sua conta.
                 </p>
             </div>
@@ -91,7 +102,7 @@ include __DIR__ . '/includes/header.php';
             <?php endif; ?>
 
             <!-- ABAS DE PERFIL -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; background: rgba(15, 23, 42, 0.7); padding: 6px; border-radius: 14px; margin-bottom: 28px; border: 1px solid var(--glass-border);">
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; background: #f1f5f9; padding: 6px; border-radius: 14px; margin-bottom: 28px; border: 1px solid #cbd5e1;">
                 <button type="button" class="btn-role <?= $selectedRole === 'aluno' ? 'active' : '' ?>" onclick="switchRole('aluno')">
                     🎓 Aluno
                 </button>

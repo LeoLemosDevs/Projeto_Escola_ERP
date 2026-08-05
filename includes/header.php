@@ -11,23 +11,52 @@ $activePage = $activePage ?? '';
     <title><?= htmlspecialchars($pageTitle) ?></title>
     <link rel="stylesheet" href="<?= base_url('assets/css/design-system.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/light-school.css') ?>">
     <script src="<?= base_url('assets/js/main.js') ?>" defer></script>
 </head>
-<body>
+<body class="light-body">
 
-<header class="navbar">
+<!-- BARRA DE DESTAQUES SUPERIOR (ESTILO COLÉGIO MASTER) -->
+<div class="top-announcement-bar">
+    <div class="container top-bar-container">
+        <div class="top-bar-left">
+            <span class="top-badge">⚡ VEM AÍ O CONEXÃO MASTER 2027</span>
+            <a href="contato.php" class="top-bar-link">🎙️ PODCAST EDU</a>
+            <span style="opacity: 0.7;">|</span>
+            <span>🏛️ Unidades: São Paulo, Campinas & Rio de Janeiro</span>
+        </div>
+        <div class="top-bar-right">
+            <a href="<?= base_url('login.php') ?>" class="top-bar-link">🔒 Portal EDU (Aluno/Professor)</a>
+            <span style="opacity: 0.7;">|</span>
+            <a href="<?= base_url('contato.php') ?>" class="top-bar-link">💬 Master Resolve</a>
+            <span style="opacity: 0.7;">|</span>
+            <a href="#niveis" class="top-bar-link">📚 Livraria & Material</a>
+        </div>
+    </div>
+</div>
+
+<header class="navbar light-theme">
     <div class="container nav-container">
-        <a href="<?= base_url('index.php') ?>" class="logo">
-            <div class="logo-badge">MS</div>
-            <span>Master School</span>
+        <!-- LOGOMARCA MASTER SCHOOL (GEOMÉTRICA INSPIRADA NO COLÉGIO MASTER) -->
+        <a href="<?= base_url('index.php') ?>" class="master-logo">
+            <div class="master-logo-text">
+                <span class="master-logo-subtitle">COLÉGIO & GRUPO</span>
+                <span class="master-logo-title"><span class="text-master">master</span> <span class="text-school">school</span></span>
+            </div>
+            <div class="master-logo-shapes">
+                <div class="shape-square" title="Educação Infantil"></div>
+                <div class="shape-arch" title="Ensino Fundamental"></div>
+                <div class="shape-circle" title="Ensino Médio"></div>
+                <div class="shape-star" title="Excelência & Conquista"></div>
+            </div>
         </a>
 
         <ul class="nav-menu">
+            <li><a href="<?= base_url('index.php') ?>" class="nav-link <?= $activePage === 'home' ? 'active' : '' ?>">Home</a></li>
             <li><a href="<?= base_url('quem-somos.php') ?>" class="nav-link <?= $activePage === 'quem-somos' ? 'active' : '' ?>">Quem Somos</a></li>
-            <li><a href="<?= base_url('missao-visao-valores.php') ?>" class="nav-link <?= $activePage === 'mvv' ? 'active' : '' ?>">Missão, Visão & Valores</a></li>
             <li><a href="<?= base_url('unidades.php') ?>" class="nav-link <?= $activePage === 'unidades' ? 'active' : '' ?>">Unidades</a></li>
+            <li><a href="<?= base_url('index.php#niveis') ?>" class="nav-link">Níveis de Ensino</a></li>
             <li><a href="<?= base_url('professores.php') ?>" class="nav-link <?= $activePage === 'professores' ? 'active' : '' ?>">Professores</a></li>
-            <li><a href="<?= base_url('trabalhe-conosco.php') ?>" class="nav-link <?= $activePage === 'trabalhe-conosco' ? 'active' : '' ?>">Trabalhe Conosco</a></li>
             <li><a href="<?= base_url('contato.php') ?>" class="nav-link <?= $activePage === 'contato' ? 'active' : '' ?>">Contato</a></li>
             
             <?php if (is_logged_in()): ?>
@@ -37,10 +66,10 @@ $activePage = $activePage ?? '';
                     if ($role === 'professor') $dashUrl = 'professor/index.php';
                     if ($role === 'admin') $dashUrl = 'admin/index.php';
                 ?>
-                <li><a href="<?= base_url($dashUrl) ?>" class="btn nav-login-btn">Meu Painel (<?= ucfirst($role) ?>)</a></li>
-                <li><a href="<?= base_url('logout.php') ?>" class="nav-link" style="color: var(--danger);">Sair</a></li>
+                <li><a href="<?= base_url($dashUrl) ?>" class="btn nav-login-btn" style="background: var(--master-navy);">Meu Painel (<?= ucfirst($role) ?>)</a></li>
+                <li><a href="<?= base_url('logout.php') ?>" class="nav-link" style="color: #dc2626 !important;">Sair</a></li>
             <?php else: ?>
-                <li><a href="<?= base_url('login.php') ?>" class="btn nav-login-btn">Login de Entrada</a></li>
+                <li><a href="<?= base_url('login.php') ?>" class="btn nav-login-btn">Portal EDU (Login)</a></li>
             <?php endif; ?>
         </ul>
 
